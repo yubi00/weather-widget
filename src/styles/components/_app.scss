@@ -1,0 +1,38 @@
+.app {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+.weather__widget::before {
+  background-color: #0099cc;
+  content: "";
+  display: block;
+  height: 5px;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: -15px;
+}
+
+.weather__widget {
+  background-color: whitesmoke;
+  width: 80rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border: 1px solid #ccc;
+  padding: $xl-size $l-size;
+  position: relative;
+
+  @media (max-width: $desktop-breakpoint) {
+    flex-direction: column;
+    > * {
+      padding: $xl-size;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}

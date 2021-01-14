@@ -1,0 +1,22 @@
+.widget {
+  padding: $l-size;
+  color: #181818;
+}
+
+.widget .widget__title {
+  text-transform: uppercase;
+  font-size: $font-size-medium;
+  font-weight: 800;
+  margin-bottom: $l-size;
+}
+
+.widget__info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.widget__temp {
+  margin: 0;
+  font-size: $font-size-large;
+  font-weight: 800;
+}

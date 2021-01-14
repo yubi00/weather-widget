@@ -1,0 +1,48 @@
+.weather__form {
+  position: relative;
+  padding-right: $l-size;
+
+  > * {
+    margin-bottom: $s-size;
+  }
+
+  @media (min-width: $desktop-breakpoint) {
+    border-right: 1px solid #ccc;
+  }
+}
+
+.widget__title__input {
+  min-width: 30rem;
+  padding: $s-size;
+  color: #777;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  font-size: $m-size;
+  font-weight: 500;
+}
+
+.temp__options {
+  display: flex;
+}
+
+.temp__celsius {
+  margin-right: $xxl-size;
+}
+
+.wind__options {
+  display: flex;
+}
+
+.wind__on {
+  margin-right: $xxl-size;
+}
+
+input[type="radio"] {
+  margin-right: $s-size;
+}
+
+label {
+  font-weight: 500;
+  color: #181818;
+}
