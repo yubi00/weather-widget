@@ -1,4 +1,5 @@
 import React from "react";
+import { getWindDirection } from "../utils/getWindDirection";
 
 const WeatherWidget = ({ temp, name, wind }) => {
   return (
@@ -10,7 +11,8 @@ const WeatherWidget = ({ temp, name, wind }) => {
           <h3 className='widget__city'>{name}</h3>
           <div className='widget__temp'>{temp}</div>
           <div className='widget__wind'>
-            <strong>{wind.deg}</strong> {wind.speed}km/h
+            <strong>Wind</strong> {getWindDirection(wind.deg)}{" "}
+            {`${wind.speed}km/hr`}
           </div>
         </div>
       </div>

@@ -8,8 +8,7 @@ const useRequest = () => {
     const fetchData = () => {
       navigator.geolocation.getCurrentPosition((pos) => {
         const { latitude, longitude } = pos.coords;
-        const API_KEY = "00dbe002cb21b123ffb5f00cf564a7d4";
-        const url = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${API_KEY}`;
+        const url = `https://api.openweathermap.org/data/2.5/weather?units=metric&lat=${latitude}&lon=${longitude}&appid=${process.env.REACT_APP_API_KEY}`;
         fetch(url)
           .then((res) => res.json())
           .then((data) => {
