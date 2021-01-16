@@ -15,6 +15,12 @@ const WeatherForm = ({
     setTempUnit(e.target.value);
   };
 
+  const handleTitleChange = (e) => {
+    if (e.key === "Enter") {
+      setWidgetTitle(e.target.value);
+    }
+  };
+
   return (
     <div className='weather__form'>
       <div className='widget__title__container'>
@@ -23,7 +29,8 @@ const WeatherForm = ({
           type='text'
           className='widget__title__input'
           placeholder='Title of widget'
-          onChange={(e) => setWidgetTitle(e.target.value)}
+          onKeyPress={handleTitleChange}
+          autoFocus={true}
         />
       </div>
       <div className='weather__temp'>
